@@ -6,5 +6,4 @@ urlpatterns = [
     path('raw-query/', views.raw_query_view, name='raw_query'),
     path('execute-sql/', views.execute_sql_view, name='execute_sql'),
     path('execute-custom-sql/', views.execute_custom_sql_view, name='execute_custom_sql'),
-    path('call-stored-procedure/', views.call_stored_procedure_view, name='call_stored_procedure'),
 ]

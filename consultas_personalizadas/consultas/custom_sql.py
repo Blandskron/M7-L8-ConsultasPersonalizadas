@@ -7,9 +7,3 @@ def execute_custom_sql():
         cursor.execute("SELECT * FROM consultas_person WHERE last_name = %s", ['Doe'])
         results = cursor.fetchall()
     return [{'id': row[0], 'first_name': row[1], 'last_name': row[2], 'age': row[3], 'email': row[4]} for row in results]
-
-def call_stored_procedure():
-    with connection.cursor() as cursor:
-        cursor.callproc('test_procedure', [1, 'Sample'])
-        results = cursor.fetchall()
-    return results
